@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode: improved for contrast and beauty */
+    --background: #f5f7fa; /* soft light gray-blue */
+    --foreground: #22223b; /* deep blue-gray for strong contrast */
+
+    --card: #ffffff; /* true white for cards */
+    --card-foreground: #22223b;
+
+    --popover: #f0f4f8;
+    --popover-foreground: #22223b;
+
+    --primary: #00b4d8; /* bright cyan */
+    --primary-foreground: #ffffff;
+
+    --secondary: #caf0f8; /* pale blue */
+    --secondary-foreground: #22223b;
+
+    --muted: #e0e7ef; /* soft blue-gray */
+    --muted-foreground: #5c677d; /* medium gray-blue for muted text */
+
+    --accent: #48cae4; /* vibrant blue */
+    --accent-foreground: #22223b;
+
+    --destructive: #e63946; /* strong red */
+    --destructive-foreground: #fff;
+
+    --border: #bfc9d1; /* subtle blue-gray border */
+    --input: #bfc9d1;
+    --ring: #00b4d8;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark theme overrides */
+    --background: 220 40% 5%; /* Very Dark Desaturated Blue */
+    --foreground: 210 20% 98%;
+
+    --card: 220 30% 8%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 40% 5%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 190 95% 55%;
+    --primary-foreground: 220 40% 5%;
+
+    --secondary: 215 30% 12%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 30% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 190 95% 55%;
+    --accent-foreground: 220 40% 5%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 25% 18%;
+    --input: 215 25% 18%;
+    --ring: 190 95% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  section {
+    @apply py-10 md:py-20 lg:py-28;
+  }
+}
+
+.typing-glow {
+  text-shadow: 0 0 8px #00b4d8, 0 0 16px #48cae4, 0 0 2px #fff;
+}
