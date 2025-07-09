@@ -25,7 +25,7 @@ export const useTheme = () => {
  * ThemeProvider keeps track of the current theme in localStorage and updates
  * the `html` element's class list + color-scheme property accordingly.
  */
-export const ThemeProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+export const ThemeProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>("dark"); // fixed default for SSR
   const [mounted, setMounted] = useState(false);
 

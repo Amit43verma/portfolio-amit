@@ -33,7 +33,7 @@ export default function ContactSection() {
         const data = await res.json()
         setStatus(data.error || "Failed to send message.")
       }
-    } catch (err) {
+    } catch {
       setStatus("Failed to send message. Please try again later.")
     }
     setSubmitting(false)

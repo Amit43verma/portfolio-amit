@@ -12,7 +12,6 @@ import {
   Linkedin,
   Mail,
   Briefcase,
-  GraduationCap,
   Lightbulb,
   type LucideIcon,
 } from "lucide-react"
